@@ -7,6 +7,7 @@ A SQL-like query engine that runs on CSV files — built with **pure Python**, n
 ## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![OOP](https://img.shields.io/badge/OOP-Design-6A1B9A?style=flat&logoColor=white)
 ![CSV](https://img.shields.io/badge/Data-CSV-2E7D32?style=flat&logoColor=white)
 
@@ -26,30 +27,38 @@ A SQL-like query engine that runs on CSV files — built with **pure Python**, n
 
 ---
 
-## Run from Source
+## Run with Docker (Recommended)
 
-1. Make sure you have **Python 3.x** installed — no external dependencies
-2. Run the interactive REPL:
-```bash
-python main.py
-```
-3. Or use as a module:
-```python
-from main import QueryEngine
+> **Prerequisite:** [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and running.
 
-engine = QueryEngine()
-results = engine.query("SELECT name, age FROM users WHERE age > 25 ORDER BY age DESC")
-for row in results:
-    print(row)
-```
-4. Run the test suite:
+**1. Clone the repository:**
 ```bash
-python tests/test_engine.py
+git clone https://github.com/YOUR_USERNAME/mini-query-engine.git
+cd mini-query-engine
 ```
+
+**2. Build the image:**
+```bash
+docker compose build
+```
+
+**3. Start the interactive REPL:**
+```bash
+docker compose run --rm repl
+```
+
+**4. Run the full test suite (73/73 tests):**
+```bash
+docker compose run --rm tests
+```
+
+> No Python installation required — Docker handles everything.
 
 ---
 
 ## Example Queries
+
+Once inside the REPL (`sql>`), try these:
 
 ```sql
 SELECT * FROM users
@@ -58,6 +67,24 @@ SELECT * FROM users WHERE city = 'Mumbai'
 SELECT * FROM users ORDER BY salary DESC
 SELECT * FROM users GROUP BY department
 SELECT name, salary FROM users WHERE age >= 30 ORDER BY salary DESC
+```
+
+Type `exit` to quit the REPL.
+
+---
+
+## Run from Source (Alternative)
+
+If you prefer running without Docker:
+
+1. Make sure you have **Python 3.x** installed — no external dependencies
+2. Run the interactive REPL:
+```bash
+python main.py
+```
+3. Run the test suite:
+```bash
+python tests/test_engine.py
 ```
 
 ---
@@ -77,8 +104,11 @@ mini-query-engine/
 │   ├── users.csv         # Sample dataset
 │   ├── products.csv      # Sample dataset
 │   └── orders.csv        # Sample dataset
-└── tests/
-    └── test_engine.py    # Full test suite (no external dependencies)
+├── tests/
+│   └── test_engine.py    # Full test suite (73 tests, no external dependencies)
+├── Dockerfile
+├── docker-compose.yml
+└── .dockerignore
 ```
 
 ---
