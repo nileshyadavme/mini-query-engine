@@ -1,0 +1,11 @@
+id,customer,product,quantity,status,amount
+1,Alice,Laptop,1,delivered,75000
+2,Bob,Phone,2,delivered,50000
+3,Carol,Headphones,1,shipped,3500
+4,David,Chair,2,delivered,17000
+5,Eve,Monitor,1,pending,22000
+6,Frank,Keyboard,3,delivered,5400
+7,Grace,Laptop,2,shipped,150000
+8,Henry,Webcam,1,delivered,4200
+9,Isla,Desk,1,pending,12000
+10,Jack,Lamp,4,delivered,4800

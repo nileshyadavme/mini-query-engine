@@ -1,0 +1,28 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments (if someone accidentally creates one)
+venv/
+.venv/
+env/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Docker files themselves (no need to copy into image)
+Dockerfile
+.dockerignore
+docker-compose.yml

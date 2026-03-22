@@ -1,0 +1,19 @@
+services:
+
+  # ── Interactive REPL ─────────────────────────────────────────────────────────
+  # Run with:  docker compose run --rm repl
+  repl:
+    build: .
+    image: mini-query-engine
+    container_name: mini-query-engine-repl
+    stdin_open: true      # keeps STDIN open (-i)
+    tty: true             # allocates a pseudo-TTY (-t)
+    command: python main.py
+
+  # ── Test Suite (73/73 tests) ─────────────────────────────────────────────────
+  # Run with:  docker compose run --rm tests
+  tests:
+    build: .
+    image: mini-query-engine
+    container_name: mini-query-engine-tests
+    command: python tests/test_engine.py

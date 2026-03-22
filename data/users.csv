@@ -1,0 +1,11 @@
+id,name,age,city,salary,department
+1,Alice,30,Mumbai,85000,Engineering
+2,Bob,25,Delhi,62000,Marketing
+3,Carol,35,Bangalore,95000,Engineering
+4,David,28,Mumbai,71000,HR
+5,Eve,32,Chennai,88000,Engineering
+6,Frank,24,Delhi,55000,Marketing
+7,Grace,40,Bangalore,110000,Management
+8,Henry,27,Mumbai,67000,HR
+9,Isla,33,Chennai,91000,Engineering
+10,Jack,22,Delhi,48000,Marketing
