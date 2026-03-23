@@ -13,6 +13,12 @@ A SQL-like query engine that runs on CSV files — built with **pure Python**, n
 
 ---
 
+## Current Focus
+
+🛠️ **Currently working on:** `LIMIT` support for query output pagination.
+
+---
+
 ## Features
 
 - `SELECT` specific columns or `*`

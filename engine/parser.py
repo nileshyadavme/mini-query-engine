@@ -10,7 +10,7 @@ Supported syntax:
     SELECT col FROM table ORDER BY col ASC|DESC
     SELECT col FROM table GROUP BY col
     SELECT col FROM table WHERE col OP value ORDER BY col ASC|DESC
-
+    
 Operators in WHERE: =  !=  >  <  >=  <=
 """
 
